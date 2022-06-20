@@ -39,17 +39,26 @@ body{
     cursor: pointer;
 }
 
+.toggler:hover{
+    transform: scale(1.5);
+}
+
 .card{
-    width: 100%;
+    width: auto;
     background-color: var(--very-dark-desaturated-blue);
     padding: 15px 10px;
     margin: 20px 0;
     border-radius: 5px;
 }
 
-#todo{
+#todo, .todo{
     color: var(--light-grayish-blue);
     font-family: 'Josefin', sans-serif;
+}
+
+.delete-icon:hover{
+    cursor: pointer;
+    transform: scale(1.5);
 }
 
 .title{
@@ -104,8 +113,7 @@ input[type='text']{
 }
 
 .card-footer{
-    /* display: none; */
-    display: flex;
+    display: none;
     justify-content: space-between;
     padding: 10px 20px;
     color: var(--light-grayish-blue);
