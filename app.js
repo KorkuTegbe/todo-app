@@ -33,7 +33,7 @@ const cardFooter = document.querySelector('.card-footer')
     form.addEventListener('submit',addTodo);
     // toggler.addEventListener('click', changeTheme);
     // todoCheck.addEventListener('check', markTodo);
-    // clearAll.addEventListener('click', clearTodos);
+    clearAll.addEventListener('click', clearTodos);
     // console.log('events loaded')
 // }
 
@@ -61,7 +61,11 @@ function addTodo(e){
     e.preventDefault();
 }
 
-
+//clear all todos
+function clearTodos(){
+    todoCollection.remove();
+    console.log('deleted');
+}
 
 
 

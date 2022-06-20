@@ -125,6 +125,10 @@ input[type='text']{
     color: var(--light-grayish-blue-hover);
 }
 
+.clear{
+    cursor: pointer;
+}
+
 .status{
     cursor: pointer;
     display: flex;
