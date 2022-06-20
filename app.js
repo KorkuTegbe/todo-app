@@ -23,8 +23,7 @@ const itemsLeft = document.querySelector('.items-left');
 const status = document.querySelector('.status');
 const clearAll = document.querySelector('.clear');
 const cardFooter = document.querySelector('.card-footer');
-const body = document.querySelector('body');
-
+const body = document.querySelector('body')
 // console.log(form,toggler,todo,todoCheck,todoCollection,itemsLeft,status,clearAll, deleteIcon)
 
 // loadEventListeners()
@@ -46,7 +45,7 @@ function addTodo(e){
     const todoItem = document.createElement('div');
     //add classname
     todoItem.className = 'todo-item';
-    console.log(todoItem);
+    // console.log(todoItem);
     //create checkbox and user todo value
     todoItem.innerHTML = `<input type="checkbox" name="" id="">
     <p class="todo">${todo.value}</p>
@@ -73,11 +72,19 @@ function clearTodos(){
 function deleteTodo(e){
     // console.log(e.target)
     // console.log(e.target.parentElement)
-    console.log(e.target.parentElement.parentElement)
-    if(e.target.parentElement.classList.contains('todo-item')){
-        e.target.parentElement.remove()
+    // console.log(e.target.parentElement.parentElement)
+    if(e.target.classList.contains('delete-icon')){
+        e.target.parentElement.remove();
     }
+
 }
+
+//mark todo
+// function markTodo(){
+//     if(e.target.parentElement.classList.contains('todo-item')){
+//         e.target.parentElement.strike();
+//     }
+// }
 
 
 
