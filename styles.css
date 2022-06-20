@@ -134,3 +134,45 @@ input[type='text']{
     color: var(--light-grayish-blue-hover)
 }
 
+.attribution { 
+    font-size: 11px; text-align: center; 
+    margin-top: 17rem;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%);
+}
+
+
+@media (min-width: 376px) and (max-width: 600px){
+    body{
+        background-image: url(./images/bg-mobile-dark.jpg);
+        background-size: contain;
+    }
+
+    .container{
+        width: 300px;
+        margin: 0 auto;
+        max-width: 100%;
+    }
+
+    #title-section{
+        margin-top: 0px;
+    }
+}
+
+@media (max-width: 375px){
+    body{
+        background-image: url(./images/bg-mobile-dark.jpg);
+        background-size: contain;
+    }
+
+    .container{
+        width: 300px;
+        margin: 0 auto;
+        max-width: 100%;
+    }
+
+    #title-section{
+        margin-top: 0;
+    }
+}
