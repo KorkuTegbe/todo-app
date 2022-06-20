@@ -1,0 +1,136 @@
+@import url('https://fonts.google.com/specimen/Josefin+Sans');
+
+:root{
+    --bright-blue: hsl(220, 98%, 61%);
+    --check-background: linear-gradient( hsl(192, 100%, 67%) to hsl(280, 87%, 65%));
+    /* Dark theme */
+    --very-dark-blue: hsl(235, 21%, 11%);
+    --very-dark-desaturated-blue: hsl(235, 24%, 19%);
+    --light-grayish-blue: hsl(234, 39%, 85%);
+    --light-grayish-blue-hover: hsl(236, 33%, 92%);
+    --dark-grayish-blue: hsl(234, 11%, 52%);
+    --very-dark-grayish-blue: hsl(233, 14%, 35%);
+    --very-dark-grayish-blue: hsl(237, 14%, 26%);
+}
+
+body{
+    background: var(--very-dark-blue);
+    background-image: url(./images/bg-desktop-dark.jpg);
+    background-repeat: no-repeat;
+    font-family: 'Josefin', sans-serif;
+    font-size: 18px;
+}
+
+.container{
+    width: 500px;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+#title-section{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    margin-top: 100px;
+}
+
+.toggler{
+    align-self: center;
+    cursor: pointer;
+}
+
+.card{
+    width: 100%;
+    background-color: var(--very-dark-desaturated-blue);
+    padding: 15px 10px;
+    margin: 20px 0;
+    border-radius: 5px;
+}
+
+#todo{
+    color: var(--light-grayish-blue);
+    font-family: 'Josefin', sans-serif;
+}
+
+.title{
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    font-size: 3rem;
+}
+
+input[type='checkbox']{
+    appearance: none;
+    background-color: #fff;
+    margin: 0;
+    width: 1.15em;
+    height: 1.15em;
+    border: 0.15em solid hsl(237, 14%, 26%);
+    border-radius: 100px;
+}
+
+input[type="checkbox"]::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--form-control-color);
+}
+
+input[type='text']{
+    border: none;
+    outline: none;
+    background: none;
+    padding: 10px;
+    margin: 0 20px;
+    color: #f4f4ff;
+}
+
+/* input[type='text']:active{
+    font-family: 'Josefin', sans-serif;
+    font-size: 40px;
+} */
+
+.todo-item{
+    border-bottom: 1px solid #fff;
+    padding: 5px 10px;
+    display: flex;
+    /* justify-content: space-between;*/
+    align-items: center; 
+}
+
+#todo-collection{
+    display: none;
+}
+
+.card-footer{
+    /* display: none; */
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    color: var(--light-grayish-blue);
+    font-size: small;
+    font-family: 'Josefin', sans-serif;
+}
+
+.card-footer:hover{
+    color: var(--light-grayish-blue-hover);
+}
+
+.status{
+    cursor: pointer;
+    display: flex;
+    margin-left: 10px;
+    margin-bottom: 0;
+    justify-content: space-between;
+    font-size: 18px;
+}
+
+.status p{
+    margin: 0 5px;
+}
+
+.status p:hover{
+    color: var(--light-grayish-blue-hover)
+}
+
