@@ -22,7 +22,8 @@ const todoCollection = document.querySelector('#todo-collection');
 const itemsLeft = document.querySelector('.items-left');
 const status = document.querySelector('.status');
 const clearAll = document.querySelector('.clear');
-const cardFooter = document.querySelector('.card-footer')
+const cardFooter = document.querySelector('.card-footer');
+const body = document.querySelector('body');
 
 // console.log(form,toggler,todo,todoCheck,todoCollection,itemsLeft,status,clearAll, deleteIcon)
 
@@ -34,6 +35,7 @@ const cardFooter = document.querySelector('.card-footer')
     // toggler.addEventListener('click', changeTheme);
     // todoCheck.addEventListener('check', markTodo);
     clearAll.addEventListener('click', clearTodos);
+    body.addEventListener('click',deleteTodo);
     // console.log('events loaded')
 // }
 
@@ -65,6 +67,16 @@ function addTodo(e){
 function clearTodos(){
     todoCollection.remove();
     console.log('deleted');
+}
+
+//clear individual todo
+function deleteTodo(e){
+    // console.log(e.target)
+    // console.log(e.target.parentElement)
+    console.log(e.target.parentElement.parentElement)
+    if(e.target.parentElement.classList.contains('todo-item')){
+        e.target.parentElement.remove()
+    }
 }
 
 
